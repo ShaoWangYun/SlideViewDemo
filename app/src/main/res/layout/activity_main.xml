@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btn_ListView"
+        android:layout_above="@+id/btn_RecyclerView"
+        android:layout_marginBottom="100dp"
+        android:text="ListView"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/btn_RecyclerView"
+        android:layout_centerVertical="true"
+        android:text="RecyclerView"
+        android:textAllCaps="false"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/btn_GridView"
+        android:layout_below="@+id/btn_RecyclerView"
+        android:text="GridView"
+        android:textAllCaps="false"
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+
+</RelativeLayout>
