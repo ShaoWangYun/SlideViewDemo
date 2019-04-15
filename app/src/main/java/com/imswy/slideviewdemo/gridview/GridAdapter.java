@@ -1,26 +1,24 @@
-package com.imswy.slideviewdemo.listview;
+package com.imswy.slideviewdemo.gridview;
 
 import android.content.Context;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.imswy.slideviewdemo.R;
-import com.imswy.slideviewdemo.recyclerview.RecyclerDataBean;
+import com.imswy.slideviewdemo.listview.ListDataBean;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListAdapter extends BaseAdapter {
+public class GridAdapter extends BaseAdapter {
 
     private Context context = null;
-    private List<ListDataBean> list = new ArrayList<>();
+    private List<GridDataBean> list = new ArrayList<>();
 
-    public ListAdapter (Context context, List<ListDataBean> list) {
+    public GridAdapter (Context context, List<GridDataBean> list) {
         this.context = context;
         this.list = list;
     }
@@ -31,7 +29,7 @@ public class ListAdapter extends BaseAdapter {
     }
 
     @Override
-    public ListDataBean getItem (int position) {
+    public GridDataBean getItem (int position) {
         return list.get(position);
     }
 
@@ -46,8 +44,8 @@ public class ListAdapter extends BaseAdapter {
         if (convertView == null) {
             mHolder = new ViewHolder();
             LayoutInflater inflater = LayoutInflater.from(context);
-            convertView = inflater.inflate(R.layout.list_item, null, true);
-            mHolder.Index = (TextView) convertView.findViewById(R.id.text_list);
+            convertView = inflater.inflate(R.layout.grid_item, null, true);
+            mHolder.Index = (TextView) convertView.findViewById(R.id.text_grid);
             convertView.setTag(mHolder);
         } else {
             mHolder = (ViewHolder) convertView.getTag();
